@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumaya Fathima | AI Specialist</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --bg: #0a0a0c;
+            --card: #16161a;
+            --accent: #38bdf8;
+            --text: #e2e8f0;
+            --muted: #94a3b8;
+            --nav-h: 80px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', -apple-system, sans-serif; }
+        html { scroll-behavior: smooth; }
+        body { background: var(--bg); color: var(--text); line-height: 1.6; }
+
+        /* Navigation */
+        nav { 
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0 8%; position: fixed; width: 100%; top: 0; height: var(--nav-h);
+            background: rgba(10, 10, 12, 0.95); backdrop-filter: blur(12px); z-index: 1000;
+            border-bottom: 1px solid #222;
+        }
+        .logo { font-weight: 800; font-size: 1.2rem; letter-spacing: -1px; }
+        .logo span { color: var(--accent); }
+        .nav-links { display: flex; list-style: none; gap: 2rem; }
+        .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.85rem; transition: 0.3s; }
+        .nav-links a:hover { color: var(--accent); }
+
+        /* Hero */
+        header { 
+            min-height: 100vh; display: flex; flex-direction: column; 
+            justify-content: center; padding: var(--nav-h) 8% 0; 
+        }
+        .subtitle { color: var(--accent); font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; }
+        h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); line-height: 1; margin-bottom: 1.5rem; letter-spacing: -2px; }
+        .hero-text { max-width: 650px; color: var(--muted); margin-bottom: 2.5rem; font-size: 1.1rem; }
+
+        .btn-group { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .btn { padding: 0.9rem 2rem; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 0.9rem; transition: 0.3s; display: flex; align-items: center; gap: 8px; justify-content: center; }
+        .primary { background: var(--accent); color: #000; }
+        .secondary { border: 1px solid #333; color: var(--text); }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(56, 189, 248, 0.15); }
+
+        /* Portfolio Sections */
+        section { padding: 8rem 8% 4rem; }
+        .section-title { font-size: 1.8rem; margin-bottom: 3rem; color: #fff; }
+
+        .bento-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .card { 
+            background: var(--card); padding: 2.5rem; border-radius: 12px; 
+            border: 1px solid #222; transition: 0.4s; display: flex; flex-direction: column;
+        }
+        .card.featured { grid-column: span 2; grid-row: span 2; border-color: var(--accent); }
+        .card:hover { transform: translateY(-5px); border-color: var(--accent); background: #1c1c21; }
+
+        .badge-group { display: flex; gap: 8px; margin: 1.5rem 0; flex-wrap: wrap; }
+        .badge { font-size: 0.65rem; background: #222; color: var(--accent); padding: 4px 10px; border-radius: 4px; font-weight: 700; text-transform: uppercase; border: 1px solid #333; }
+
+        /* Project Links Buttons */
+        .project-link { margin-top: auto; display: flex; gap: 0.5rem; flex-wrap: wrap; }
+        .project-link a { text-decoration: none; font-weight: 700; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 5px; }
+        .project-link a.primary { background: var(--accent); color: #000; padding: 0.5rem 1rem; border-radius: 6px; }
+        .project-link a.secondary { background: #222; color: var(--text); padding: 0.5rem 1rem; border-radius: 6px; border: 1px solid #333; }
+        .project-link a:hover { opacity: 0.9; }
+
+        /* Footer */
+        footer { padding: 6rem 8%; border-top: 1px solid #111; text-align: center; background: #070708; }
+        .social-links { display: flex; gap: 2.5rem; justify-content: center; margin: 3rem 0; }
+        .social-links a { color: var(--text); text-decoration: none; display: flex; align-items: center; gap: 10px; font-weight: 600; transition: 0.3s; }
+        .social-links a:hover { color: var(--accent); transform: scale(1.1); }
+        .location { color: var(--muted); font-size: 0.9rem; margin-top: 2rem; }
+
+        /* Reveal Animation */
+        .reveal { opacity: 0; transform: translateY(30px); transition: 0.8s ease-out; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        @media (max-width: 900px) {
+            .bento-grid { grid-template-columns: 1fr; }
+            .card.featured { grid-column: span 1; }
+            header { padding-top: 120px; }
+            .btn { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">SUMAYA<span>.AI</span></div>
+        <ul class="nav-links">
+            <li><a href="#work">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <span class="subtitle">Next Gen Ambassador @ Decoding Data Science</span>
+        <h1>Sumaya Fathima</h1>
+        <p class="hero-text">BIT student @ Liwa University. Engineering intelligent AI systems, neuro-responsive urban simulations, and sustainable tech solutions.</p>
+        <div class="btn-group">
+            <a href="#work" class="btn primary">View Work</a>
+            <a href="https://your-resume-link.com" target="_blank" class="btn secondary"><i data-lucide="download"></i> Resume</a>
+        </div>
+    </header>
+
+    <section id="work" class="reveal">
+        <h2 class="section-title">Verified Portfolio</h2>
+        <div class="bento-grid">
+            <!-- NeuroScape -->
+            <div class="card featured">
+                <span class="badge" style="width: fit-content; margin-bottom: 1rem;">Global 2nd Runner-up</span>
+                <h3>NeuroScape</h3>
+                <p>AI consultancy designing emotionally responsive urban environments. Selected for the INJAZ Company Program to develop as a startup-oriented solution for MENA regional adaptation.</p>
+                <div class="badge-group">
+                    <span class="badge">AI Strategy</span><span class="badge">Urban Tech</span><span class="badge">Innovation</span>
+                </div>
+                <div class="project-link">
+                    <a href="https://neuroscape.netlify.app/" target="_blank" class="primary">VIEW LIVE DEMO</a>
+                </div>
+            </div>
+
+            <!-- Liwabot -->
+            <div class="card">
+                <h3>Liwabot</h3>
+                <p>Custom AI Chatbot deployment assisting the Liwa University community with intelligent queries.</p>
+                <div class="badge-group">
+                    <span class="badge">LLM Integration</span><span class="badge">Netlify</span>
+                </div>
+                <div class="project-link">
+                    <a href="https://liwabot.netlify.app/" target="_blank" class="primary">OPEN APP</a>
+                </div>
+            </div>
+
+            <!-- GPA Calculator with GitHub -->
+            <div class="card">
+                <h3>GPA Calculator</h3>
+                <p>High-precision web application for university curriculum and grade management. View the code on GitHub.</p>
+                <div class="badge-group">
+                    <span class="badge">JavaScript</span><span class="badge">Web Dev</span>
+                </div>
+                <div class="project-link">
+                    <a href="https://liwagpa.com" target="_blank" class="primary">VISIT SITE</a>
+                    <a href="https://github.com/SumayaLiwa/liwagpa" target="_blank" class="secondary"><i data-lucide="github"></i> GitHub</a>
+                </div>
+            </div>
+
+            <!-- SRC2026 Research -->
+            <div class="card">
+                <h3>SRC2026 Research</h3>
+                <p>Presenting "Human-AI Collaboration" at the 17th Student Research Conference at Zayed University.</p>
+                <div class="badge-group"><span class="badge">Academic Research</span></div>
+            </div>
+
+            <!-- Green Print -->
+            <div class="card">
+                <h3>Green Print</h3>
+                <p>Sustainability project converting leaf waste into eco-friendly paper products to support UN SDGs.</p>
+                <div class="badge-group"><span class="badge">Sustainability</span></div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h2>Get In Touch</h2>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/sumaya-fathima-7148063a9" target="_blank"><i data-lucide="linkedin"></i> LinkedIn</a>
+            <a href="https://wa.me/971567438319" target="_blank"><i data-lucide="phone"></i> WhatsApp</a>
+        </div>
+        <p class="location">Abu Dhabi, United Arab Emirates</p>
+        <p style="font-size: 0.7rem; color: #333; margin-top: 4rem;">&copy; 2026 Sumaya Fathima. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Load Icons
+        lucide.createIcons();
+
+        // Reveal Animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

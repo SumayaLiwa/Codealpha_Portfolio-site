@@ -68,7 +68,8 @@ Sustainability initiative turning leaf waste into eco-friendly paper products to
 ---
 
 ## 🔹 Getting Started
-
+Check out the Live Demo:
+https://portfolio-sumaya.netlify.app/
 Clone the repository and open `index.html` in a browser:
 
 ```bash

@@ -69,7 +69,8 @@ Sustainability initiative turning leaf waste into eco-friendly paper products to
 
 ## 🔹 Getting Started
 Check out the Live Demo:
-https://portfolio-sumaya.netlify.app/
+https://portfolio-sumayaa.netlify.app/
+
 Clone the repository and open `index.html` in a browser:
 
 ```bash
@@ -78,8 +79,8 @@ cd portfolio
 open index.html
 Dependencies: None (Vanilla HTML/CSS/JS)
 🔹 Contact
-LinkedIn: Sumaya Fathima⁠�
-WhatsApp: +971567438319⁠�
+LinkedIn: Sumaya Fathima⁠
+WhatsApp: +971567438319⁠
 Location: Abu Dhabi, United Arab Emirates
 🔹 License
 This repository is for personal portfolio purposes.
